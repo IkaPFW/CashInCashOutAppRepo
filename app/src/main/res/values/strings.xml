@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">CashInCashOutApp</string>
+    <string name="passwordChange">
+        <u>Ganti Password</u>
+    </string>
+    <string name="bio">
+        <b>About This App</b><br/>
+        Aplikasi ini dibuat oleh:<br/>
+        Nama: Ika Puspa Fairuz Wiwanata<br/>
+        NIM: 1741720018<br/>
+        Tanggal: 23 Oktober 2021
+    </string>
+</resources>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView android:id="@+id/outcomeTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/outcomeDateText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Tambah Pengeluaran"
+        android:layout_marginHorizontal="15dp"
+        android:textColor="@color/red"
+        android:fontFamily="sans-serif-black"
+        android:textSize="25sp"/>
+
+    <TextView android:id="@+id/outcomeDateText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/outcomeTitle"
+        app:layout_constraintBottom_toTopOf="@id/outcomeDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Tanggal:"
+        android:layout_marginHorizontal="15dp"
+        android:fontFamily="sans-serif-black"
+        android:textSize="20sp"/>
+
+    <EditText android:id="@+id/outcomeDate"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        app:layout_constraintTop_toBottomOf="@id/outcomeDateText"
+        app:layout_constraintBottom_toTopOf="@id/outcomeNominalText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/outcomeDateBtn"/>
+
+    <ImageButton android:id="@+id/outcomeDateBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toEndOf="@id/outcomeDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/outcomeDateText"
+        app:layout_constraintBottom_toTopOf="@id/outcomeNominalText"
+        android:src="@drawable/calendar"
+        android:scaleType="fitXY"
+        android:backgroundTint="@color/white"/>
+
+<!--    <DatePicker android:id="@+id/outcomeDatePicker"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/outcomeDateBtn"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/outcomeDateBtn"/>-->
+
+    <TextView android:id="@+id/outcomeNominalText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/outcomeDate"
+        app:layout_constraintBottom_toTopOf="@id/outcomeNominal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Nominal:"
+        android:layout_marginHorizontal="15dp"
+        android:fontFamily="sans-serif-black"
+        android:textSize="20sp"/>
+
+    <EditText android:id="@+id/outcomeNominal"
+        android:layout_width="373dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/outcomeNominalText"
+        app:layout_constraintBottom_toTopOf="@id/outcomeDescText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView android:id="@+id/outcomeDescText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/outcomeNominal"
+        app:layout_constraintBottom_toTopOf="@id/outcomeDesc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Keterangan:"
+        android:layout_marginHorizontal="15dp"
+        android:fontFamily="sans-serif-black"
+        android:textSize="20sp"/>
+
+    <EditText android:id="@+id/outcomeDesc"
+        android:layout_width="373dp"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/outcomeDescText"
+        app:layout_constraintBottom_toTopOf="@id/outcomeSaveBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button android:id="@+id/outcomeSaveBtn"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/outcomeDesc"
+        app:layout_constraintBottom_toTopOf="@id/outcomeReturnBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Simpan"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/appBtn"/>
+
+    <Button android:id="@+id/outcomeReturnBtn"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/outcomeSaveBtn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="300dp"
+        android:text="&lt;&lt; Kembali"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/returnBtn"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

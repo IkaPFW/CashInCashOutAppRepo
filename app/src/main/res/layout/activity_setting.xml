@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView android:id="@+id/settingTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pengaturan"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/passwordChange"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:textSize="25sp"
+        android:textStyle="bold"/>
+
+    <TextView android:id="@+id/passwordChange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/passwordChange"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/settingTitle"
+        app:layout_constraintBottom_toTopOf="@id/passwordCurrentTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="15dp"/>
+
+    <TextView android:id="@+id/passwordCurrentTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Password Sekarang"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/passwordChange"
+        app:layout_constraintBottom_toTopOf="@id/passwordCurrent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="15dp"/>
+
+    <EditText android:id="@+id/passwordCurrent"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/passwordCurrentTitle"
+        app:layout_constraintBottom_toTopOf="@id/passwordNewTitle"
+        android:inputType="textPassword"/>
+
+    <TextView android:id="@+id/passwordNewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Password Baru"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/passwordCurrent"
+        app:layout_constraintBottom_toTopOf="@id/passwordNew"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="15dp"/>
+
+    <EditText android:id="@+id/passwordNew"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/passwordNewTitle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:inputType="textPassword"/>
+
+    <Button android:id="@+id/passwordSaveBtn"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/passwordNew"
+        app:layout_constraintBottom_toTopOf="@id/passwordReturnBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Simpan"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/appBtn"/>
+
+    <Button android:id="@+id/passwordReturnBtn"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/passwordSaveBtn"
+        app:layout_constraintBottom_toTopOf="@id/dev"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="170dp"
+        android:text="&lt;&lt; Kembali"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/returnBtn"/>
+
+    <ImageView
+        android:id="@+id/dev"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/dev_photo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/bio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/passwordReturnBtn"
+        android:layout_marginBottom="50dp"/>
+
+<!--    <TextView android:id="@+id/about"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="About This App"-->
+<!--        android:textSize="20dp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:layout_marginTop="150dp"-->
+<!--        app:layout_constraintStart_toEndOf="@id/dev"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/passwordReturnBtn"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/bio"/>-->
+
+    <TextView android:id="@+id/bio"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:text="@string/bio"
+        android:textSize="18sp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="110dp"
+        app:layout_constraintTop_toBottomOf="@id/passwordReturnBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
